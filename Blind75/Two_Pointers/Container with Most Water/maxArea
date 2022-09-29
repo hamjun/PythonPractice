@@ -1,0 +1,18 @@
+class Solution:
+    def maxArea(self, height: list[int]) -> int:
+        ansArea = 0
+        l, r = 0, len(height) -1
+        
+        while l < r:
+            area = (r - l) * min(height[l], height[r])
+            if height[l] < height[r]:
+                l += 1
+            else:
+                r -= 1
+            ansArea = max(area, ansArea)
+        return ansArea
+
+if __name__ == "__main__":
+    nums = [1,8,6,2,5,4,8,3,7]
+    obj = Solution()
+    print(obj.maxArea(nums))
