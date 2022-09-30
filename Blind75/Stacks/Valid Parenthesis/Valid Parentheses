@@ -1,0 +1,24 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        for paren in s:
+            if paren == '[' or paren == '{' or paren == '(':
+                stack.append(paren)
+            elif len(stack) == 0:
+                return False
+            elif paren == ']' and stack[len(stack) - 1] == '[':
+                stack.pop(-1)
+            elif paren == '}' and stack[len(stack) - 1] == '{':
+                stack.pop(-1)
+            elif paren == ')' and stack[len(stack) - 1] == '(':
+                stack.pop(-1)
+            else:
+                return False
+        if len(stack) == 0:
+            return True
+        return False
+
+if __name__ == "__main__":
+    s = "()[]{}"
+    obj = Solution()
+    print(obj.isValid(s ))
