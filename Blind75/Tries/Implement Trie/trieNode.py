@@ -41,4 +41,4 @@ if __name__ == "__main__":
     s1 = [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
     s = "catsandog"
     wordDict = ["cats","dog","sand","and","cat"]
-    print(obj.wordBreak(s, wordDict))
+    print(obj.Trie(s, wordDict))
