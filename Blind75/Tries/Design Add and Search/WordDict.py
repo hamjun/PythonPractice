@@ -36,8 +36,6 @@ class WordDictionary:
 
 if __name__ == "__main__":
     obj = Solution()
-    s = ["WordDictionary","addWord","addWord","addWord","search","search","search","search"]
-    s1 = [[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]]
     s = "catsandog"
     wordDict = ["cats","dog","sand","and","cat"]
     print(obj.Trie(s, wordDict))
